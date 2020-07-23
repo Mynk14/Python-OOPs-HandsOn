@@ -62,6 +62,15 @@ class FinalYears(Library):
         self.no_of_books = no_of_books
         self.fine = fine
 
+    def add_books(self, number):
+        self.no_of_books += number
+
+    def remove_books(self, number):
+        if self.no_of_books == 0:
+            print 'No books Issued'
+        else:
+            self.no_of_books -= number
+
 
 s1 = Library("Shiv", "Raj", 0, 5)
 s2 = Library("Anurag", "Bisht", 0, 8)
@@ -93,6 +102,12 @@ print Library.is_lib_open("Saturday")
 f1 = FinalYears("Joy", "Mathews", 0, 2)
 print f1.fine_amount
 print f1.__dict__
+
+f1.add_books(5)
+print f1.no_of_books
+
+f1.remove_books(3)
+print f1.no_of_books
 
 t1 = Teachers("Manoj", "Kumar", 0, ["Python basics", "C in depth"])
 print t1.__dict__
