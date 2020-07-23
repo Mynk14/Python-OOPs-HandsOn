@@ -16,7 +16,7 @@ Topics Studied :
    - logging.error()
    They are used to monitor the code and helps in debugging.
 
-3. Class methods and stactic methods
+3. Class methods and static methods
 
 4. Instance and class variables
 
