@@ -14,7 +14,8 @@ Topics Studied :
    - logging.debug()
    - logging.warning()
    - logging.error()
-   They are used to monitor the code and helps in debugging.
+
+They are used to monitor the code and helps in debugging.
 
 3. Class methods and static methods
 
