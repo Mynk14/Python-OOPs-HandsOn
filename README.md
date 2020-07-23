@@ -4,6 +4,7 @@ Topics Studied :
 
 1. Object Oriented programming 
    - Inheritance
+     - Practiced hands on 
    - Abstraction
    - Encapsulation
    - Polymorphism
@@ -21,3 +22,5 @@ Topics Studied :
 
 5. Python decorators
    
+   
+Hands on code is attached.
