@@ -1,75 +1,75 @@
 class Library:
-    fine_amount = 10
-    total_students = 0
+    fine_amount = 10
+    total_students = 0    total_amount = 0
 
-    def __init__(self, first, last, fine, standard):
-        self.first = first
-        self.last = last
-        self.standard = standard
-        self.fine = fine
-        Library.total_students +=1
+    def __init__(self, first, last, fine, standard):
+        self.first = first
+        self.last = last
+        self.standard = standard
+        self.fine = fine
+        Library.total_students +=1
 
-    def full_name(self):
-        print '{} {}'.format(self.first, self.last),
+    def full_name(self):
+        print '{} {}'.format(self.first, self.last),
 
-    def fine(self, days):
-        self.fine = self.fine_amount * days
-        print self.fine
+    def fine(self, days):
+        self.fine = self.fine_amount * days
+        print self.fine
 
-    @classmethod
-    def raise_fine(cls, amount):
-        cls.fine_amount = cls.fine_amount + amount
+    @classmethod
+    def raise_fine(cls, amount):
+        cls.fine_amount = cls.fine_amount + amount
 
-    @staticmethod
-    def is_lib_open(day):
-        if day == "Saturday" or day == "Sunday":
-            return False
-        return True
+    @staticmethod
+    def is_lib_open(day):
+        if day == "Saturday" or day == "Sunday":
+            return False
+        return True
 
 
 class Teachers(Library):
-    fine_amount = 5
+    fine_amount = 5
 
-    def __init__(self, first, last, fine, books=None):
-        self.first = first
-        self.last = last
-        self.fine = fine
-        if books is None:
-            self.books = []
-        else:
-            self.books = books
+    def __init__(self, first, last, fine, books=None):
+        self.first = first
+        self.last = last
+        self.fine = fine
+        if books is None:
+            self.books = []
+        else:
+            self.books = books
 
-    def add_books(self, book):
-        if book in self.books:
-            print 'Already Present'
-        else:
-            self.books.append(book)
+    def add_books(self, book):
+        if book in self.books:
+            print 'Already Present'
+        else:
+            self.books.append(book)
 
-    def remove_books(self, book):
-        if book in self.books:
-            self.books.remove(book)
-        else:
-            print book + ' Not Present'
+    def remove_books(self, book):
+        if book in self.books:
+            self.books.remove(book)
+        else:
+            print book + ' Not Present'
 
 
 class FinalYears(Library):
-    fine_amount = 15
-    standard = 12
+    fine_amount = 15
+    standard = 12
 
-    def __init__(self, first, last, fine, no_of_books):
-        self.first = first
-        self.last = last
-        self.no_of_books = no_of_books
-        self.fine = fine
+    def __init__(self, first, last, fine, no_of_books):
+        self.first = first
+        self.last = last
+        self.no_of_books = no_of_books
+        self.fine = fine
 
-    def add_books(self, number):
-        self.no_of_books += number
+    def add_books(self, number):
+        self.no_of_books += number
 
-    def remove_books(self, number):
-        if self.no_of_books == 0:
-            print 'No books Issued'
-        else:
-            self.no_of_books -= number
+    def remove_books(self, number):
+        if self.no_of_books == 0:
+            print 'No books Issued'
+        else:
+            self.no_of_books -= number
 
 
 s1 = Library("Shiv", "Raj", 0, 5)
